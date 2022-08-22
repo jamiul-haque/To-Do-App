@@ -34,19 +34,17 @@ class Task {
     remind = json['remind'];
     repeat = json['repeat'];
   }
-  
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['id'] = this.id;
-    data['title'] = this.title;
-    data['note'] = this.note;
-    data['isCompleted'] = this.isCompleted;
-    data['startTime'] = this.startTime;
-    data['color'] = this.color;
-    data['endTime'] = this.endTime;
-    data['remind'] = this.remind;
-    data['repeat'] = this.repeat;
-    data['date'] = this.date;
-    return data;
-  }
+
+  Map<String, dynamic> toJson() => {
+        "id": id,
+        'title': title,
+        'note': note,
+        'isCompleted': isCompleted,
+        'startTime': startTime,
+        'color': color,
+        'endTime': endTime,
+        'remind': remind,
+        'repeat': repeat,
+        'date': date,
+      };
 }
